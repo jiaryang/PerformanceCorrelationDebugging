@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ -z "$1" ]; then
+	echo "Usage: $0 <input_file> [output_directory_prefix]"
+	exit 1
+fi
+
 input=$1
 outdir_pref=${2:-"./tmp"}
 CURRENTDATE=`date +"%Y-%m-%d-%T"`
